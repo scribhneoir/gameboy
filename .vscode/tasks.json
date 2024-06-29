@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [{
         "label": "buildRom",
-        "command": "rgbasm -L -o build/game.o game.asm && rgblink -o build/game.gb build/game.o && rgbfix -v -p 0xFF build/game.gb",
+        "command": "rgbasm -L -o build/${fileBasenameNoExtension}.o ${fileBasenameNoExtension}.asm && rgblink -o build/${fileBasenameNoExtension}.gb build/${fileBasenameNoExtension}.o && rgbfix -v -p 0xFF build/${fileBasenameNoExtension}.gb",
         "args": [],
         "type": "shell",
         "presentation": {
